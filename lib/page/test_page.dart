@@ -1,61 +1,49 @@
 import 'package:flutter/material.dart';
+import 'package:game_test/components/test_page_slider.dart';
+import 'package:game_test/components/variants.dart';
 import 'package:game_test/continents/app_color.dart';
 
-class 
-TestPage extends StatefulWidget {
+import '../app/test_page_appbar.dart';
+
+class TestPage extends StatefulWidget {
   const TestPage({super.key});
   @override
-  State< TestPage> createState() => _TestPageState();
+  State<TestPage> createState() => _TestPageState();
 }
 
-class _TestPageState extends State<
-TestPage> {
+class _TestPageState extends State<TestPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.bgColor,
       appBar: AppBar(
         backgroundColor: AppColors.bgColor,
-        
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Card(
+        title: const TestPageAppBar(),
+      ),
+      body: Column(
+        children: [
+          const TestSlider(),
+          const Center(
+            child: Text('Pekin',
+            style: TextStyle(fontSize: 30,
+            height: 1.5,
+            ),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Center(
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 4,horizontal:8),
-                child: Row(
-                  children: [
-                    Icon(Icons.tips_and_updates,
-                    color: AppColors.red,),
-                    Text('32'),
-                     Icon(Icons.add_circle,
-                    color: AppColors.blue,),
-                  ],
-                ),
-                ),
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset('images/Pekin.jpg'),
+              ),
             ),
-            Text('3'),
-            Row(
-              children: [
-                SizedBox(
-                  width: 80,
-                  height: 30,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 3,
-                   itemBuilder: (context, index) {
-                    return Icon(Icons.favorite,color: AppColors.red,);
-                   }  
-                  ),
-                ),
-                Icon(Icons.more_vert),
-              ],
-            ),
-
-            
-          ],
-        ),        
+          ),
+          const Variants(),
+        ],
       ),
     );
   }
 }
+
+

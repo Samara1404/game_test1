@@ -26,7 +26,7 @@ class Continent {
   const sAmerica = Continent(
     name: AppText.southAmerica,
     icon: "south_america",
-    color: Color(0xffE7B1E52c),
+    color: Color(0xffe7b1e52c),
 );
   const africa = Continent(
     name: AppText.africa,

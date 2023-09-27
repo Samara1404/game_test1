@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColor,
         centerTitle: true,
-        title: Text(AppText.gameTitle),
+        title: const Text(AppText.gameTitle),
         actions: [
           IconButton(
             onPressed: () {},
@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Divider(
+          const Divider(
             height: 2,
             color: Colors.black,
             indent: 30,
@@ -49,13 +49,13 @@ class HomePage extends StatelessWidget {
           Expanded(
             child: GridView.builder(
                 itemCount: continents.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
                 itemBuilder: (context, index) {
                   return ContinentsCard(
                     item: continents [index], onTap: () {
                     Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => TestPage())); 
+                      builder: (context) => const TestPage())); 
                     }
                   );
                  
