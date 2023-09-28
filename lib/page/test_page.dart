@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:game_test/components/test_page_slider.dart';
 import 'package:game_test/components/variants.dart';
 import 'package:game_test/continents/app_color.dart';
+import 'package:game_test/models/suroo.dart';
 
 import '../app/test_page_appbar.dart';
 
 class TestPage extends StatefulWidget {
-  const TestPage({super.key});
+  const TestPage({super.key, required this.suroo});
+  final List<Suroo> suroo;
   @override
   State<TestPage> createState() => _TestPageState();
 }

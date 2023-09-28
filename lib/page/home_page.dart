@@ -49,13 +49,22 @@ class HomePage extends StatelessWidget {
           Expanded(
             child: GridView.builder(
                 itemCount: continents.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
                 itemBuilder: (context, index) {
                   return ContinentsCard(
-                    item: continents [index], onTap: () {
+                    item: continents [index], 
+                    onTap: () {
+                      if (continents[index].suroo != null) {
+                      
                     Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => const TestPage())); 
+                      builder: (context) => TestPage(
+                        suroo: continents[index].suroo!,
+                      )));
+                       }else{
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Kechiresiz, joop tuura emes')));
+                       }
                     }
                   );
                  
