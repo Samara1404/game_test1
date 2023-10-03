@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
           Expanded(
             child: GridView.builder(
                 itemCount: continents.length,
-                gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
                 itemBuilder: (context, index) {
                   return ContinentsCard(
@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
                       )));
                        }else{
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Kechiresiz, joop tuura emes')));
+                          const SnackBar(content: Text('Kechiresiz, joop tuura emes')));
                        }
                     }
                   );

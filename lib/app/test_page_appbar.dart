@@ -1,11 +1,18 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import '../continents/app_color.dart';
 
 class TestPageAppBar extends StatelessWidget {
   const TestPageAppBar({
-    super.key,
-  });
+    Key? key,
+    required this.tuuraJooptor,
+    required this.kataJooptor,
+    required this.index,
+  }) : super(key: key);
+  final int tuuraJooptor;
+  final int kataJooptor;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +24,13 @@ class TestPageAppBar extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 4,horizontal:8),
             child: Row(
               children: [
-                Icon(Icons.tips_and_updates,
-                color: AppColors.red,),
-                const Text('32'),
-                 Icon(Icons.add_circle,
-                color: AppColors.blue,),
+                Text('$kataJooptor', style: TextStyle(color: AppColors.red),),
+                const SizedBox(width: 10),
+               
+                Text('$index', style: TextStyle(color: AppColors.grey, fontSize: 20),),
+                 const SizedBox(width: 10),
+            
+               Text('$tuuraJooptor', style: TextStyle(color: AppColors.green),),
               ],
             ),
             ),

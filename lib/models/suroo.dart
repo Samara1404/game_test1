@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 class Suroo {
   Suroo({required this.text, required this.jooptor, required this.image});
   final String text;
@@ -51,7 +53,7 @@ final s4 = Suroo(
       joop(text: "Bangladesh"),
       joop(text: "Brazil"),
     ],
-    image: "New York");
+    image: "NewYork");
 
 final s5 = Suroo(
     text: "Paris",
@@ -71,4 +73,4 @@ final s6 = Suroo(
       joop(text: "Canada"),
       joop(text: "Xainan"),
     ],
-    image: "Bishkek");
+    image: "Pekin");

@@ -13,7 +13,7 @@ class Continent {
     final asia = Continent(
     name: AppText.asia,
     icon: "asia",
-    color: Color(0xffFE8D7D),
+    color: const Color(0xffFE8D7D),
     suroo: asiaQuestions,
 );
   const europe= Continent(
@@ -29,6 +29,7 @@ class Continent {
   const sAmerica = Continent(
     name: AppText.southAmerica,
     icon: "south_america",
+    // ignore: use_full_hex_values_for_flutter_colors
     color: Color(0xffe7b1e52c),
 );
   const africa = Continent(
